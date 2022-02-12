@@ -1,6 +1,7 @@
 import './JokeItem.css'
 
 function JokeItem(props) {
+  // get the data from the prop
   const joke = props.joke;
 
   return (

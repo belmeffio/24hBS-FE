@@ -4,4 +4,6 @@
   margin: var(--space-min) 0;
   border: 1px solid var(--text-off);
   border-radius: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
