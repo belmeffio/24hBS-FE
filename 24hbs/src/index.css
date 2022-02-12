@@ -3,7 +3,8 @@
   --bg-primary: #282c34;
   --bg-secondary: #282c3488;
   --bg-highlight: #50555f88;
-  --text-primary: #fefefe;
+  --text-primary: #eeeeee;
+  --text-on: #fefefe;
   --text-off: #fefefe46;
   --text-highlight: #20fff4e0;
 
@@ -28,4 +29,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a, a:visited {
+  color: var(--text-on);
+}
+
+a:hover {
+  color: var(--text-highlight);
 }

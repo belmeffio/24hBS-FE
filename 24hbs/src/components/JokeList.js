@@ -1,12 +1,14 @@
-import './JokeList.css'
+import "./JokeList.css";
 
-import './JokeItem'
-import JokeItem from './JokeItem';
+import "./JokeItem";
+import JokeItem from "./JokeItem";
 
-function JokeList() {
+function JokeList(props) {
   return (
     <div className="JokeList">
-      <JokeItem></JokeItem>
+      {props.jokes.map((joke) => (
+        <JokeItem key={joke.id} id={joke.id} joke={joke} />
+      ))}
     </div>
   );
 }

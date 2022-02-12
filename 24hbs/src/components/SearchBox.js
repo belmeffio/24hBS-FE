@@ -1,10 +1,11 @@
 import './SearchBox.css'
 
-function SearchBox() {
+function SearchBox(props) {
 
   const handleSearch = e => {
-    console.log(e.target.value);
+    props.onSearch(e.target.value);
   }
+
   return (
     <div className="SearchBox">
       <input type="search" placeholder="Look for a JOKE!" onChange={handleSearch}></input>

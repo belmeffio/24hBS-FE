@@ -1,12 +1,14 @@
 import './JokeItem.css'
 
 function JokeItem(props) {
+  const joke = props.joke;
+
   return (
     <div className="JokeItem">
-      <img src={props.icon_url} alt={`Joke PIC`}></img>
+      <img src={joke.icon_url} alt={`Joke PIC`}></img>
       <h3>Chuck Norris FACT</h3>
-      <p>{props.value}</p>
-      <a src={props.url} target="_blank">The original</a>
+      <p>{joke.value}</p>
+      <a href={joke.url}>The original</a>
     </div>
   );
 }
