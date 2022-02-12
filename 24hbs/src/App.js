@@ -111,7 +111,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <a href="https://api.chucknorris.io/"><img src={logo} className="App-logo" alt="logo" /></a>
         <p>24ore Business School Frontend-test</p>
       </header>
       <div className="App-content">

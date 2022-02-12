@@ -1,4 +1,4 @@
 .JokeList {
   width:40%;
-  margin: var(--space-max) 0;
+  margin-bottom: var(--space-max);
 }

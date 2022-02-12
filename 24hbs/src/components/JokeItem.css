@@ -2,4 +2,6 @@
   background: var(--bg-highlight);
   padding: var(--space-standard);
   margin: var(--space-min) 0;
+  border: 1px solid var(--text-off);
+  border-radius: 10px;
 }

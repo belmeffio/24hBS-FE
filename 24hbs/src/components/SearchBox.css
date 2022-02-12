@@ -1,18 +1,21 @@
 .SearchBox {
-  /* margin-bottom: var(--space-max); */
+  width: 40%;
 }
-
 
 .SearchBox input{
   background: var(--bg-secondary);
-  padding: 5px 10px 5px 55px;
+  text-align: center;
+  padding: 5px;
   width: 100%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   border: 1px solid var(--text-off);
   border-radius: 8px;
+  border-color: var(--text-on);
   color: var(--text-primary);
 }
 
-.SearchBox input:focus{
+.SearchBox input:focus,
+.SearchBox input:hover {
   outline: 2px solid var(--text-highlight);
+  background: var(--bg-highlight);
 }
