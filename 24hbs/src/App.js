@@ -3,6 +3,7 @@ import './App.css';
 
 // Components
 import SearchBox from './components/SearchBox'
+import JokeList from './components/JokeList';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       </header>
       <div className='App-content'>
         <SearchBox></SearchBox>
+        <JokeList></JokeList>
       </div>
     </div>
   );

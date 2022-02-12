@@ -1,0 +1,4 @@
+.JokeItem {
+  background: var(--bg-highlight);
+  padding: var(--space-standard);
+}

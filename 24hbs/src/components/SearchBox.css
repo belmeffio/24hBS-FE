@@ -1,3 +1,8 @@
+.SearchBox {
+  margin-bottom: var(--space-max);
+}
+
+
 .SearchBox input{
   background: var(--bg-secondary);
   padding: 5px 10px 5px 55px;

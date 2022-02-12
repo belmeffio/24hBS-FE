@@ -2,9 +2,15 @@
 :root {
   --bg-primary: #282c34;
   --bg-secondary: #282c3488;
+  --bg-highlight: #50555f88;
   --text-primary: #fefefe;
   --text-off: #fefefe46;
   --text-highlight: #20fff4e0;
+
+  --space-min: 15px;
+  --space-standard: 20px;
+  --space-big: 30px;
+  --space-max: 50px;
 }
 /* END vars */
 
