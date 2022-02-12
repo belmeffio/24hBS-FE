@@ -6,13 +6,17 @@ import JokeItem from "./JokeItem";
 
 function JokeList(props) {
   const jokes = props.jokes;
-  console.log(jokes);
+  const thereAreJokes = jokes && jokes.length > 0;
 
   return (
     <div className="JokeList">
+      <h3 className="JokeList-title">
+        {props.random && thereAreJokes && "Random joke!"}
+        {!props.random && thereAreJokes && "Found these jokes"}
+        {!thereAreJokes && "No jokes D:"}
+      </h3>
       {(jokes && jokes.length === 0) ? (
         <>
-          <h3>Nothing found</h3>
           <img src={nope} className="JokeList-nope" alt="nope" />
         </>
       ) : (

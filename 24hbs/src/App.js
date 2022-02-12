@@ -1,5 +1,5 @@
 // Modules
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 // Styles
@@ -55,27 +55,58 @@ const DUMMY_JOKES = [
 ];
 
 function App() {
-  const [jokes, setJokes] = useState(DUMMY_JOKES);
+  const [jokes, setJokes] = useState([]);
+  const [isRandom, setIsRandom] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loopingId, setLoopingId] = useState();
 
   const fetchJoke = (query) => {
-    const url = `https://api.chucknorris.io/jokes/search?query=${query}`;
+    setIsLoading(true);
+    const endpoint = query !== "" ? `/search?query=${query}` : "random";
+    const url = `https://api.chucknorris.io/jokes/${endpoint}`;
     console.log(url);
-    return axios
-      .get(url)
-      .then((response) =>{
-        setJokes(response.data.result);
-      });
+    return axios.get(url).then((response) => {
+      setJokes(response.data.result ? response.data.result : [response.data]);
+      setIsLoading(false);
+    });
   };
 
   const searchHandler = (val) => {
     console.log(`searching: ${val}`);
     if (val.length > 2) {
+      setIsRandom(false);
+      stopLoopFetch();
       fetchJoke(val);
-    }
-    else {
-      setJokes([])
+    } else {
+      setIsRandom(true);
+      fetchJoke("");
+      if(!isRandom) {
+        loopFecth();
+      }
     }
   };
+
+  const loopFecth = () => {
+    const interval = setInterval(() => {
+    setLoopingId(interval);
+      fetchJoke("");
+    }, 3000);
+    setLoopingId(interval);
+    return interval;
+  }
+
+  const stopLoopFetch = () => {
+    clearInterval(loopingId);
+  }
+
+  useEffect(() => {
+    fetchJoke("");
+
+    const interval = loopFecth();
+    setLoopingId(interval);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="App">
@@ -85,7 +116,11 @@ function App() {
       </header>
       <div className="App-content">
         <SearchBox onSearch={searchHandler}></SearchBox>
-        <JokeList jokes={jokes} />
+        {isLoading ? (
+          <h3>Loading..</h3>
+        ) : (
+          <JokeList jokes={jokes} random={isRandom} />
+        )}
       </div>
     </div>
   );
