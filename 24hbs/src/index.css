@@ -1,4 +1,16 @@
+/* START vars */
+:root {
+  --bg-primary: #282c34;
+  --bg-secondary: #282c3488;
+  --text-primary: #fefefe;
+  --text-off: #fefefe46;
+  --text-highlight: #20fff4e0;
+}
+/* END vars */
+
+
 body {
+  background-color: var(--bg-primary);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
