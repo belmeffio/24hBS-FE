@@ -1,0 +1,68 @@
+FE Test
+
+The purpose of this test is not only to quickly gauge an applicant's abilities with a simple HTML/CSS mockup, but also their approach to development. It is intended to spend 2-4 hours on the test.
+
+Applicants may use whatever techniques, frameworks, libs and technology they want to achieve the outcome.
+
+The design should be very rudimentary or standard, but a beautiful result will be appreciated.
+
+How to complete the task
+Complete the project and send back the URL of your own public Git repository. Add some notes about the techniques, frameworks, libs and technology choosen.
+
+If you are not comfortable with using Git, you can send a ZIP file containing all the sources.
+
+Show your working
+If you choose to use build tools to compile your CSS and Javascript, please ensure to include all the runnable build procedure as well.
+
+Cross-browser inconsistencies
+If you get around to doing cross-browser testing, for the sake of this project the most up-to-date versions of Chrome, Firefox and Safari will suffice. Include details in the README file/email of what cross-browser testing you have been able to do.
+
+Responsive Design
+For extra credit, ensure that the site scales well on mobile.
+
+Clean code
+This fictitious project is part of a larger plan to reuse templates for multiple properties. When authoring your CSS ensure that it is easy for another developer to find and change things such as fonts and colours.
+
+
+
+The Test 
+Create a simple page called JOKES to display data available at https://api.chucknorris.io/jokes/search?query=[QUERY] (API specs can be found at https://api.chucknorris.io/). When a user access the website a simple Google-like home page is shown with a big search box in the middle. Under the search box a new random JOKE is shown every 3 seconds (API for random JOKE https://api.chucknorris.io/jokes/random).
+By typing one or more term in the searchbox a list of matching JOKES are displayed in the page.
+
+
+
+Some Extras
+Feel free to add as many improvements you want in the project, both in the source or on the final page/application.
+
+Extra credits on code:
+- Simplicity, scalability
+- Linter
+- Usage of a template engine
+- Reusable components
+- Storybook components
+- E2E automated tests
+- Edge Deploy
+- Configurable API endpoint and configurable entity processor (some other public APIs can be found here https://github.com/public-apis/public-apis)
+- Jamstack approach with static and dynamic version of the result view
+- ...Many more
+
+
+Extra credits on frontend:
+- Speed, performance, speed, speed
+- Effects and animation for random JOKE
+- Results displayed in a responsive grid
+- Direct search while typing
+- Query highlights
+- Pagination, infinite scroll
+- Display of total results 
+- Debug backdoor
+- Category filter with facets in the category selector
+- ...Many more
+
+
+Good luck!
+We look forward to seeing what you can do. Remember, although it is a test, there are no specific right or wrong answers that we are looking for - just do the job as best you can. Feel free to ask for any doubts or questions to sandro.bottoni@24orebs.com.
+
+
+
+
