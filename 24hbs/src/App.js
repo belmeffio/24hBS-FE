@@ -86,7 +86,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <a href="https://api.chucknorris.io/"><img src={logo} className="App-logo" alt="logo" /></a>
-        <p>24ore Business School Frontend-test</p>
+        <h1>24ore Business School Frontend-test</h1>
       </header>
       <div className="App-content">
         <SearchBox onSearch={searchHandler}></SearchBox>

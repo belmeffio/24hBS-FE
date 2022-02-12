@@ -9,7 +9,8 @@ function SearchBox(props) {
 
   return (
     <div className="SearchBox">
-      <input type="search" placeholder="Look for a JOKE!" onChange={handleSearch}></input>
+      <label for="search">Search for a joke:</label>
+      <input id='search' type="search" placeholder="Look for a JOKE!" onChange={handleSearch}></input>
     </div>
   );
 }
